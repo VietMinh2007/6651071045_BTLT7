@@ -1,0 +1,108 @@
+/* Dùng chung cách tính kích thước và font chữ cho các phần tử. */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Plus Jakarta Sans", "Segoe UI", sans-serif;
+}
+
+/* Tạo nền chuyển màu và căn khung nội dung vào giữa trang. */
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 16px;
+    color: #0f172a;
+    background: linear-gradient(135deg, #f0f9ff 0%, #e0e7ff 50%, #f3e8ff 100%);
+}
+
+/* Khung chứa tiêu đề, nút bấm và ảnh. */
+.card {
+    width: 100%;
+    max-width: 600px;
+    padding: 32px;
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+    box-shadow: 0 20px 40px -15px rgba(79, 70, 229, 0.12),
+        0 0 15px rgba(0, 0, 0, 0.03);
+    backdrop-filter: blur(12px);
+}
+
+/* Trang trí phần tiêu đề. */
+h1 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    color: #0f172a;
+    font-size: 22px;
+    font-weight: 700;
+    border-bottom: 2px solid #e0e7ff;
+}
+
+h1::before {
+    width: 8px;
+    height: 22px;
+    display: inline-block;
+    content: "";
+    background-color: #4f46e5;
+    border-radius: 4px;
+}
+
+/* Căn giữa nút hiển thị ảnh. */
+.btn-group {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+/* Kiểu nút bấm chính của bài tập. */
+#jsstyle {
+    padding: 12px 24px;
+    color: #ffffff;
+    background-color: #4f46e5;
+    border: 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(79, 70, 229, 0.25);
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+#jsstyle:hover {
+    background-color: #4338ca;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(79, 70, 229, 0.35);
+}
+
+#jsstyle:active {
+    transform: translateY(0);
+}
+
+/* Khu vực thông báo ban đầu hoặc ảnh được chọn. */
+.out {
+    min-height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 24px;
+    padding: 16px;
+    color: #64748b;
+    background-color: #f8fafc;
+    border: 1px dashed #cbd5e1;
+    border-radius: 12px;
+    font-size: 14px;
+    text-align: center;
+}
+
+/* Giữ ảnh vừa với vùng hiển thị. */
+.out img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}

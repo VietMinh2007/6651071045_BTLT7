@@ -1,0 +1,108 @@
+/* Dùng cùng cách tính kích thước cho tất cả các phần tử. */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Plus Jakarta Sans", "Segoe UI", sans-serif;
+}
+
+/* Nền trang và cách căn khung bài tập. */
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 16px;
+    color: #0f172a;
+    background: linear-gradient(135deg, #f0f9ff 0%, #e0e7ff 50%, #f3e8ff 100%);
+}
+
+/* Khung trắng chứa form. */
+.card {
+    width: 100%;
+    max-width: 600px;
+    padding: 32px;
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+    box-shadow: 0 20px 40px -15px rgba(79, 70, 229, 0.12),
+        0 0 15px rgba(0, 0, 0, 0.03);
+    backdrop-filter: blur(12px);
+}
+
+/* Tiêu đề có vạch màu ở bên trái. */
+h1 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    color: #0f172a;
+    font-size: 22px;
+    font-weight: 700;
+    border-bottom: 2px solid #e0e7ff;
+}
+
+h1::before {
+    width: 8px;
+    height: 22px;
+    display: inline-block;
+    content: "";
+    background-color: #4f46e5;
+    border-radius: 4px;
+}
+
+/* Các nhãn và ô nhập họ tên. */
+label {
+    display: block;
+    margin: 12px 0 5px;
+    color: #334155;
+    font-weight: 600;
+}
+
+input {
+    width: 100%;
+    padding: 10px 12px;
+    color: #0f172a;
+    background-color: #ffffff;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+input:focus {
+    border-color: #4f46e5;
+    outline: 2px solid rgba(79, 70, 229, 0.15);
+}
+
+/* Nút gửi form. */
+button {
+    margin-top: 16px;
+    padding: 11px 22px;
+    color: #ffffff;
+    background-color: #4f46e5;
+    border: 0;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #4338ca;
+}
+
+/* Khu vực hiển thị họ và tên sau khi gửi form. */
+.out {
+    min-height: 50px;
+    margin-top: 24px;
+    padding: 16px;
+    color: #334155;
+    background-color: #f8fafc;
+    border: 1px dashed #cbd5e1;
+    border-radius: 12px;
+}
+
+.out p + p {
+    margin-top: 8px;
+}

@@ -1,0 +1,70 @@
+/* Đặt cách tính kích thước thống nhất cho các phần tử. */
+* {
+    box-sizing: border-box;
+}
+
+/* Căn thẻ nội dung vào giữa trang và tạo màu nền nhẹ. */
+body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 30px 12px;
+    display: flex;
+    justify-content: center;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: linear-gradient(135deg, #e0f2fe, #ede9fe);
+}
+
+/* Khung chính chứa nội dung bài tập. */
+.card {
+    width: 100%;
+    max-width: 640px;
+    height: fit-content;
+    padding: 24px;
+    background-color: #ffffff;
+    border-radius: 14px;
+    box-shadow: 0 8px 24px #0002;
+}
+
+/* Tiêu đề của bài. */
+h1 {
+    margin-top: 0;
+    padding-bottom: 8px;
+    color: #4338ca;
+    font-size: 20px;
+    border-bottom: 2px solid #c7d2fe;
+}
+
+/* Nhãn và danh sách chọn màu. */
+label {
+    display: block;
+    margin: 10px 0 4px;
+    color: #334155;
+    font-weight: 600;
+}
+
+select,
+input[type="text"] {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+/* Các nút thao tác trên trang. */
+button,
+input[type="button"] {
+    margin: 12px 6px 0 0;
+    padding: 9px 18px;
+    color: #ffffff;
+    background-color: #4f46e5;
+    border: 0;
+    border-radius: 8px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+button:hover,
+input[type="button"]:hover {
+    background-color: #3730a3;
+}
