@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng ký thông tin</title>
+
+    <!-- Font chữ hỗ trợ tiếng Việt -->
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- File CSS nằm trong thư mục Styles -->
+    <link rel="stylesheet" href="Styles/style.css">
+</head>
+<body>
+    <main class="card wide">
+        <h1>Personal Information</h1>
+        <p class="sub">Các trường có dấu * là bắt buộc.</p>
+
+        <form id="reg">
+
+            <div class="field">
+                <label for="name">Enter name*</label>
+                <input type="text" id="name">
+                <span class="err" id="loiName"></span>
+            </div>
+
+            <div class="field" id="fieldSex">
+                <label>Sex*</label>
+                <div class="opts">
+                    <label><input type="radio" name="sex" value="Male"> Male</label>
+                    <label><input type="radio" name="sex" value="Female"> Female</label>
+                </div>
+                <span class="err" id="loiSex"></span>
+            </div>
+
+            <div class="field">
+                <label for="email">Enter email address*</label>
+                <input type="text" id="email">
+                <span class="err" id="loiEmail"></span>
+            </div>
+
+            <div class="grid2">
+                <div class="field">
+                    <label for="birthday">Birthday (MM/DD/YYYY)*</label>
+                    <input type="text" id="birthday" placeholder="mm/dd/yyyy hoặc mm-dd-yyyy">
+                    <span class="err" id="loiBirthday"></span>
+                </div>
+                <div class="field">
+                    <label for="zip">5-digit ZIP code*</label>
+                    <input type="text" id="zip" maxlength="5">
+                    <span class="err" id="loiZip"></span>
+                </div>
+                <div class="field">
+                    <label for="street">Street address (line 1)*</label>
+                    <input type="text" id="street">
+                    <span class="err" id="loiStreet"></span>
+                </div>
+                <div class="field">
+                    <label for="city">City*</label>
+                    <input type="text" id="city">
+                    <span class="err" id="loiCity"></span>
+                </div>
+            </div>
+
+            <div class="field">
+                <label for="region">Select a region*</label>
+                <select id="region">
+                    <option value="">-- Chọn --</option>
+                    <option>Hồ Chí Minh</option>
+                    <option>Hà Nội</option>
+                    <option>Đà Nẵng</option>
+                    <option>Cần Thơ</option>
+                </select>
+                <span class="err" id="loiRegion"></span>
+            </div>
+
+            <button class="btn" type="submit">Finish</button>
+            <button class="btn ghost" type="button" id="btnClear">Clear</button>
+
+            <div id="thongbao"></div>
+        </form>
+    </main>
+
+    <!-- Nạp jQuery trước, sau đó mới nạp file js của bài -->
+    <script src="Scripts/jquery.min.js"></script>
+    <script src="Scripts/cau9.js"></script>
+</body>
+</html>

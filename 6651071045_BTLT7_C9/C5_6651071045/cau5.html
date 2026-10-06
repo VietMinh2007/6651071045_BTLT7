@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hình ảnh ngẫu nhiên</title>
+
+    <!-- Font chữ hỗ trợ tiếng Việt -->
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- File CSS nằm trong thư mục Styles -->
+    <link rel="stylesheet" href="Styles/style.css">
+</head>
+<body>
+    <main class="card wide">
+        <h1>Hình ảnh ngẫu nhiên</h1>
+        <p class="sub">Mỗi lần nhấn sẽ hiển thị một trong ba hình.</p>
+
+        <button class="btn" id="jsstyle">Show Image</button>
+
+        <!-- Hình sẽ được chèn vào đây -->
+        <div class="out" id="ketqua">Chưa có hình nào.</div>
+    </main>
+
+    <!-- Nạp jQuery trước, sau đó mới nạp file js của bài -->
+    <script src="Scripts/jquery.min.js"></script>
+    <script src="Scripts/cau5.js"></script>
+</body>
+</html>

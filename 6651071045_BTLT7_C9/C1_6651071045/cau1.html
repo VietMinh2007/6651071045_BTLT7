@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đổi style đoạn văn</title>
+
+    <!-- Font chữ hỗ trợ tiếng Việt -->
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- File CSS nằm trong thư mục Styles -->
+    <link rel="stylesheet" href="Styles/style.css">
+</head>
+<body>
+    <main class="card">
+        <h1>Đổi style đoạn văn</h1>
+        <p class="sub">Chọn cỡ chữ, font chữ, màu chữ rồi nhấn Submit.</p>
+
+        <!-- Đoạn văn sẽ bị đổi style -->
+        <p id="text">JavaScript Exercises - w3resource</p>
+
+        <div class="row">
+            <div>
+                <label for="fs">Cỡ chữ (px)</label>
+                <input type="number" id="fs" value="22" min="8" max="80">
+            </div>
+            <div>
+                <label for="ff">Font chữ</label>
+                <select id="ff">
+                    <option>Be Vietnam Pro</option>
+                    <option>Arial</option>
+                    <option>Georgia</option>
+                    <option>Courier New</option>
+                    <option>Times New Roman</option>
+                </select>
+            </div>
+            <div>
+                <label for="cl">Màu chữ</label>
+                <input type="color" id="cl" value="#4f46e5">
+            </div>
+        </div>
+
+        <button class="btn" id="jsstyle">Submit</button>
+    </main>
+
+    <!-- Nạp jQuery trước, sau đó mới nạp file js của bài -->
+    <script src="Scripts/jquery.min.js"></script>
+    <script src="Scripts/cau1.js"></script>
+</body>
+</html>

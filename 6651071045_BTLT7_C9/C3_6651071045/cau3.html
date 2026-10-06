@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thêm hàng vào bảng</title>
+
+    <!-- Font chữ hỗ trợ tiếng Việt -->
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- File CSS nằm trong thư mục Styles -->
+    <link rel="stylesheet" href="Styles/style.css">
+</head>
+<body>
+    <main class="card">
+        <h1>Thêm hàng vào bảng</h1>
+        <p class="sub">Mỗi lần nhấn nút sẽ thêm một hàng ở cuối bảng.</p>
+
+        <table id="sampleTable">
+            <tr>
+                <td>Row1 cell1</td>
+                <td>Row1 cell2</td>
+            </tr>
+            <tr>
+                <td>Row2 cell1</td>
+                <td>Row2 cell2</td>
+            </tr>
+        </table>
+
+        <button class="btn" id="btnInsert">Insert row</button>
+    </main>
+
+    <!-- Nạp jQuery trước, sau đó mới nạp file js của bài -->
+    <script src="Scripts/jquery.min.js"></script>
+    <script src="Scripts/cau3.js"></script>
+</body>
+</html>

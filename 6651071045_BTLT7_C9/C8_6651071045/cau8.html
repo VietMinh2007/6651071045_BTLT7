@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Máy tính 2 số</title>
+
+    <!-- Font chữ hỗ trợ tiếng Việt -->
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- File CSS nằm trong thư mục Styles -->
+    <link rel="stylesheet" href="Styles/style.css">
+</head>
+<body>
+    <main class="card wide">
+        <h1>Máy tính hai số</h1>
+        <p class="sub">Nhập hai số rồi chọn phép toán để xem kết quả.</p>
+
+        <div class="calc">
+            <input type="text" id="a" value="12">
+
+            <!-- Mỗi nút có một id riêng để JavaScript nhận biết -->
+            <button class="btn" id="btnCong">+</button>
+            <button class="btn" id="btnTru">-</button>
+            <button class="btn" id="btnNhan">x</button>
+            <button class="btn" id="btnChia">/</button>
+            <button class="btn" id="btnMu">^</button>
+
+            <input type="text" id="b" value="14">
+            <span>=</span>
+            <input type="text" id="res" readonly>
+        </div>
+
+        <div class="out" id="ketqua">Chọn một phép toán.</div>
+    </main>
+
+    <!-- Nạp jQuery trước, sau đó mới nạp file js của bài -->
+    <script src="Scripts/jquery.min.js"></script>
+    <script src="Scripts/cau8.js"></script>
+</body>
+</html>

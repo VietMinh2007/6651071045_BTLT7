@@ -1,0 +1,246 @@
+/* =====================================================
+   FILE STYLE.CSS - ĐỊNH DẠNG GIAO DIỆN CHO CÁC BÀI TẬP
+   ===================================================== */
+
+
+/* ---------- 1. CÀI ĐẶT CHUNG CHO TOÀN TRANG ---------- */
+
+* {
+    box-sizing: border-box;      /* chiều rộng tính luôn cả padding và viền */
+}
+
+body {
+    margin: 0;                   /* bỏ khoảng trống mặc định của trình duyệt */
+    padding: 30px 15px;          /* cách mép trang: trên dưới 30px, trái phải 15px */
+    background-color: #eef0fb;   /* màu nền của trang (xanh tím nhạt) */
+    color: #1e1b3a;              /* màu chữ */
+    font-family: 'Be Vietnam Pro', Arial, sans-serif;   /* font chữ */
+    font-size: 15px;             /* cỡ chữ */
+
+    display: flex;               /* dùng flex để căn khung giữa trang */
+    justify-content: center;     /* căn giữa theo chiều ngang */
+    align-items: center;         /* căn giữa theo chiều dọc */
+    min-height: 100vh;           /* chiều cao tối thiểu bằng màn hình */
+}
+
+
+/* ---------- 2. KHUNG CHỨA NỘI DUNG (class="card") ---------- */
+
+.card {
+    width: 100%;                 /* chiếm hết chiều rộng có thể */
+    max-width: 560px;            /* nhưng không quá 560px */
+    background-color: white;     /* nền trắng */
+    padding: 30px;               /* khoảng cách từ viền vào nội dung */
+    border-radius: 18px;         /* bo tròn 4 góc */
+    box-shadow: 0px 10px 30px rgba(79, 70, 229, 0.25);   /* đổ bóng */
+}
+
+.card.wide {
+    max-width: 680px;            /* khung rộng hơn (dùng cho câu 5, 8, 9) */
+}
+
+h1 {
+    margin: 0px 0px 5px 0px;     /* chỉ chừa khoảng cách phía dưới tiêu đề */
+    font-size: 24px;             /* cỡ chữ tiêu đề */
+}
+
+.sub {
+    margin: 0px 0px 20px 0px;    /* khoảng cách phía dưới dòng mô tả */
+    color: #6b6a85;              /* màu xám tím */
+    font-size: 14px;
+}
+
+
+/* ---------- 3. NHÃN VÀ Ô NHẬP LIỆU ---------- */
+
+label {
+    display: block;              /* mỗi label nằm trên 1 dòng riêng */
+    margin-top: 14px;            /* cách phần phía trên 14px */
+    margin-bottom: 6px;          /* cách ô nhập phía dưới 6px */
+    font-weight: bold;           /* chữ đậm */
+}
+
+/* áp dụng chung cho ô text, ô số và dropdown */
+input[type="text"],
+input[type="number"],
+select {
+    width: 100%;                 /* rộng bằng khung chứa */
+    padding: 10px 12px;          /* khoảng cách từ viền vào chữ */
+    border: 2px solid #dcdff0;   /* viền xám nhạt dày 2px */
+    border-radius: 8px;          /* bo góc */
+    font-family: inherit;        /* dùng cùng font với trang */
+    font-size: 15px;
+    background-color: #fafaff;
+}
+
+/* khi click vào ô nhập thì viền đổi sang màu tím */
+input[type="text"]:focus,
+input[type="number"]:focus,
+select:focus {
+    outline: none;               /* bỏ viền xanh mặc định */
+    border-color: #4f46e5;       /* viền màu tím */
+}
+
+/* ô chọn màu (câu 1) */
+input[type="color"] {
+    width: 100%;
+    height: 42px;
+    border: 2px solid #dcdff0;
+    border-radius: 8px;
+    padding: 3px;
+}
+
+
+/* ---------- 4. NÚT BẤM ---------- */
+
+.btn {
+    margin-top: 18px;            /* cách phần phía trên */
+    padding: 10px 22px;          /* khoảng cách từ viền nút vào chữ */
+    border: none;                /* bỏ viền */
+    border-radius: 8px;          /* bo góc */
+    background-color: #4f46e5;   /* nền màu tím */
+    color: white;                /* chữ trắng */
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;             /* đưa chuột vào thì hiện hình bàn tay */
+}
+
+/* khi rê chuột vào nút thì đổi sang màu tím đậm hơn */
+.btn:hover {
+    background-color: #3730a3;
+}
+
+/* nút phụ (nút Clear ở câu 9) */
+.btn.ghost {
+    background-color: #e4e6ff;   /* nền tím nhạt */
+    color: #4f46e5;              /* chữ màu tím */
+    margin-left: 8px;            /* cách nút Finish bên cạnh */
+}
+
+
+/* ---------- 5. HÀNG NGANG (class="row") ---------- */
+/* Dùng để đặt các ô nằm cạnh nhau trên cùng một hàng */
+
+.row {
+    display: flex;               /* xếp các phần tử theo hàng ngang */
+    gap: 10px;                   /* khoảng cách giữa các phần tử */
+    align-items: center;         /* căn giữa theo chiều dọc */
+}
+
+.row div,
+.row select,
+.row input[type="text"] {
+    flex: 1;                     /* các ô chia đều chiều rộng còn lại */
+}
+
+
+/* ---------- 6. KHUNG HIỂN THỊ KẾT QUẢ (class="out") ---------- */
+
+.out {
+    margin-top: 20px;            /* cách phần phía trên */
+    padding: 15px;               /* khoảng cách từ viền vào chữ */
+    background-color: #f3f2ff;   /* nền tím nhạt */
+    border: 2px dashed #c4c0ff;  /* viền nét đứt */
+    border-radius: 10px;
+}
+
+/* hình ở câu 5 không được tràn ra ngoài khung */
+.out img {
+    max-width: 100%;
+}
+
+
+/* ---------- 7. RIÊNG CÂU 1: ĐOẠN VĂN SẼ BỊ ĐỔI STYLE ---------- */
+
+#text {
+    margin: 0px 0px 10px 0px;
+    font-size: 22px;             /* cỡ chữ ban đầu, jQuery sẽ thay đổi */
+    font-weight: bold;
+}
+
+
+/* ---------- 8. RIÊNG CÂU 3: BẢNG ---------- */
+
+table {
+    width: 100%;
+    border-collapse: collapse;   /* gộp viền các ô lại thành 1 đường */
+}
+
+td {
+    padding: 12px;
+    border: 1px solid #dcdff0;
+}
+
+/* hàng mới thêm vào sẽ có nền vàng nhạt để dễ nhận ra */
+tr.hang-moi td {
+    background-color: #fff7cc;
+}
+
+
+/* ---------- 9. RIÊNG CÂU 8: MÁY TÍNH ---------- */
+
+.calc {
+    display: flex;
+    flex-wrap: wrap;             /* hết chỗ thì xuống dòng */
+    gap: 8px;
+    align-items: center;
+}
+
+.calc input {
+    width: 85px;                 /* ô số nhỏ lại cho vừa 1 hàng */
+    text-align: center;          /* chữ nằm giữa ô */
+}
+
+.calc .btn {
+    margin-top: 0px;             /* nút trong máy tính không cần cách phía trên */
+    padding: 10px 14px;
+}
+
+.calc #res {
+    width: 120px;
+    font-weight: bold;
+    background-color: #e8ecff;   /* ô kết quả có nền khác */
+}
+
+
+/* ---------- 10. RIÊNG CÂU 9: FORM ĐĂNG KÝ ---------- */
+
+/* chia vùng chứa 4 ô thành 2 cột */
+.grid2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;   /* 2 cột bằng nhau */
+    column-gap: 15px;                 /* khoảng cách giữa 2 cột */
+}
+
+/* dòng chữ báo lỗi màu đỏ nằm dưới mỗi ô */
+.err {
+    display: block;
+    min-height: 16px;            /* giữ chỗ để form không bị nhảy khi hiện lỗi */
+    margin-top: 4px;
+    color: red;
+    font-size: 12px;
+}
+
+/* ô nhập bị sai sẽ có viền đỏ */
+input.bad,
+select.bad {
+    border-color: red;
+}
+
+/* nhóm 2 nút radio Male / Female */
+.opts label {
+    display: inline-block;       /* 2 lựa chọn nằm cùng 1 dòng */
+    margin-right: 20px;
+    font-weight: normal;
+}
+
+/* thông báo đăng ký thành công */
+.msg-ok {
+    margin-top: 15px;
+    padding: 12px;
+    background-color: #d1fae5;   /* nền xanh lá nhạt */
+    color: #065f46;              /* chữ xanh lá đậm */
+    font-weight: bold;
+    border-radius: 8px;
+}

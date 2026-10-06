@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lấy họ và tên</title>
+
+    <!-- Font chữ hỗ trợ tiếng Việt -->
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- File CSS nằm trong thư mục Styles -->
+    <link rel="stylesheet" href="Styles/style.css">
+</head>
+<body>
+    <main class="card">
+        <h1>Lấy họ và tên từ form</h1>
+        <p class="sub">Nhấn Submit để hiển thị họ tên đầy đủ.</p>
+
+        <form id="form1">
+            <label for="fname">First name</label>
+            <input type="text" id="fname" name="fname" value="David">
+
+            <label for="lname">Last name</label>
+            <input type="text" id="lname" name="lname" value="Beckham">
+
+            <button class="btn" type="submit">Submit</button>
+        </form>
+
+        <!-- Nơi hiển thị kết quả -->
+        <div class="out" id="ketqua">Kết quả sẽ hiện ở đây.</div>
+    </main>
+
+    <!-- Nạp jQuery trước, sau đó mới nạp file js của bài -->
+    <script src="Scripts/jquery.min.js"></script>
+    <script src="Scripts/cau2.js"></script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chuyển hướng đến link</title>
+
+    <!-- Font chữ hỗ trợ tiếng Việt -->
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- File CSS nằm trong thư mục Styles -->
+    <link rel="stylesheet" href="Styles/style.css">
+</head>
+<body>
+    <main class="card">
+        <h1>Chuyển hướng đến đường link</h1>
+        <p class="sub">Nhập đường link và nhấn Submit để chuyển hướng.</p>
+
+        <form id="linkForm">
+            <div class="row">
+                <input type="text" id="linkInput" placeholder="Ví dụ: https://example.com">
+                <button class="btn" type="submit" style="margin-top: 0;">Submit</button>
+            </div>
+        </form>
+
+        <div class="out" id="ketqua">Hộp thoại xác nhận sẽ hiện khi bạn nhấn Submit.</div>
+    </main>
+
+    <!-- Nạp jQuery trước, sau đó mới nạp file js của bài -->
+    <script src="Scripts/jquery.min.js"></script>
+    <script src="Scripts/cau7.js"></script>
+</body>
+</html>
